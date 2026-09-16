@@ -1,0 +1,221 @@
+[gd_scene format=3 uid="uid://c6title001dittate"]
+
+[ext_resource type="Script" path="res://scripts/Title.gd" id="1_title"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_bg"]
+bg_color = Color(0.0352941, 0.054902, 0.0901961, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_logo_bg"]
+bg_color = Color(0.0745098, 0.109804, 0.180392, 0.85)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0.219608, 0.741176, 0.972549, 0.4)
+corner_radius_top_left = 20
+corner_radius_top_right = 20
+corner_radius_bottom_right = 20
+corner_radius_bottom_left = 20
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_btn_norm"]
+bg_color = Color(0.0823529, 0.121569, 0.196078, 0.9)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0.196078, 0.27451, 0.4, 1)
+corner_radius_top_left = 12
+corner_radius_top_right = 12
+corner_radius_bottom_right = 12
+corner_radius_bottom_left = 12
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_btn_hover"]
+bg_color = Color(0.0117647, 0.521569, 0.788235, 1)
+border_width_left = 3
+border_width_top = 3
+border_width_right = 3
+border_width_bottom = 3
+border_color = Color(0.992157, 0.878431, 0.278431, 1)
+corner_radius_top_left = 12
+corner_radius_top_right = 12
+corner_radius_bottom_right = 12
+corner_radius_bottom_left = 12
+
+[node name="Title" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_title")
+
+[node name="Background" type="Panel" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_bg")
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 60
+theme_override_constants/margin_top = 50
+theme_override_constants/margin_right = 60
+theme_override_constants/margin_bottom = 40
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer"]
+layout_mode = 2
+theme_override_constants/separation = 24
+alignment = 1
+
+[node name="LogoContainer" type="PanelContainer" parent="MarginContainer/VBoxContainer"]
+custom_minimum_size = Vector2(0, 160)
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_logo_bg")
+
+[node name="LettersHBox" type="HBoxContainer" parent="MarginContainer/VBoxContainer/LogoContainer"]
+layout_mode = 2
+theme_override_constants/separation = 12
+alignment = 1
+
+[node name="LetterD" type="Label" parent="MarginContainer/VBoxContainer/LogoContainer/LettersHBox"]
+custom_minimum_size = Vector2(52, 64)
+layout_mode = 2
+theme_override_colors/font_color = Color(0.219608, 0.741176, 0.972549, 1)
+theme_override_font_sizes/font_size = 56
+text = "D"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="LetterI" type="Label" parent="MarginContainer/VBoxContainer/LogoContainer/LettersHBox"]
+custom_minimum_size = Vector2(40, 64)
+layout_mode = 2
+theme_override_colors/font_color = Color(0.992157, 0.878431, 0.278431, 1)
+theme_override_font_sizes/font_size = 56
+text = "I"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="LetterT1" type="Label" parent="MarginContainer/VBoxContainer/LogoContainer/LettersHBox"]
+custom_minimum_size = Vector2(52, 64)
+layout_mode = 2
+theme_override_colors/font_color = Color(0.972549, 0.443137, 0.443137, 1)
+theme_override_font_sizes/font_size = 56
+text = "T"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="LetterT2" type="Label" parent="MarginContainer/VBoxContainer/LogoContainer/LettersHBox"]
+custom_minimum_size = Vector2(52, 64)
+layout_mode = 2
+theme_override_colors/font_color = Color(0.219608, 0.741176, 0.972549, 1)
+theme_override_font_sizes/font_size = 56
+text = "T"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="LetterA" type="Label" parent="MarginContainer/VBoxContainer/LogoContainer/LettersHBox"]
+custom_minimum_size = Vector2(52, 64)
+layout_mode = 2
+theme_override_colors/font_color = Color(0.992157, 0.878431, 0.278431, 1)
+theme_override_font_sizes/font_size = 56
+text = "A"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="LetterT3" type="Label" parent="MarginContainer/VBoxContainer/LogoContainer/LettersHBox"]
+custom_minimum_size = Vector2(52, 64)
+layout_mode = 2
+theme_override_colors/font_color = Color(0.972549, 0.443137, 0.443137, 1)
+theme_override_font_sizes/font_size = 56
+text = "T"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="LetterE" type="Label" parent="MarginContainer/VBoxContainer/LogoContainer/LettersHBox"]
+custom_minimum_size = Vector2(52, 64)
+layout_mode = 2
+theme_override_colors/font_color = Color(0.219608, 0.741176, 0.972549, 1)
+theme_override_font_sizes/font_size = 56
+text = "E"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Subtitle" type="Label" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.580392, 0.639216, 0.721569, 1)
+theme_override_font_sizes/font_size = 18
+text = "STRATEGIC DICE BOARD GAME"
+horizontal_alignment = 1
+
+[node name="Spacer" type="Control" parent="MarginContainer/VBoxContainer"]
+custom_minimum_size = Vector2(0, 10)
+layout_mode = 2
+
+[node name="MenuButtons" type="VBoxContainer" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_constants/separation = 14
+
+[node name="Btn1P" type="Button" parent="MarginContainer/VBoxContainer/MenuButtons"]
+custom_minimum_size = Vector2(0, 60)
+layout_mode = 2
+focus_neighbor_top = NodePath("../BtnQuit")
+focus_neighbor_bottom = NodePath("../Btn2P")
+theme_override_font_sizes/font_size = 22
+theme_override_styles/normal = SubResource("StyleBoxFlat_btn_norm")
+theme_override_styles/hover = SubResource("StyleBoxFlat_btn_hover")
+theme_override_styles/focus = SubResource("StyleBoxFlat_btn_hover")
+text = "⚔ 1 Player vs CPU"
+
+[node name="Btn2P" type="Button" parent="MarginContainer/VBoxContainer/MenuButtons"]
+custom_minimum_size = Vector2(0, 60)
+layout_mode = 2
+focus_neighbor_top = NodePath("../Btn1P")
+focus_neighbor_bottom = NodePath("../BtnHowToPlay")
+theme_override_font_sizes/font_size = 22
+theme_override_styles/normal = SubResource("StyleBoxFlat_btn_norm")
+theme_override_styles/hover = SubResource("StyleBoxFlat_btn_hover")
+theme_override_styles/focus = SubResource("StyleBoxFlat_btn_hover")
+text = "👥 2 Players (Pass & Play)"
+
+[node name="BtnHowToPlay" type="Button" parent="MarginContainer/VBoxContainer/MenuButtons"]
+custom_minimum_size = Vector2(0, 60)
+layout_mode = 2
+focus_neighbor_top = NodePath("../Btn2P")
+focus_neighbor_bottom = NodePath("../BtnQuit")
+theme_override_font_sizes/font_size = 22
+theme_override_styles/normal = SubResource("StyleBoxFlat_btn_norm")
+theme_override_styles/hover = SubResource("StyleBoxFlat_btn_hover")
+theme_override_styles/focus = SubResource("StyleBoxFlat_btn_hover")
+text = "📖 How to Play (遊び方)"
+
+[node name="BtnQuit" type="Button" parent="MarginContainer/VBoxContainer/MenuButtons"]
+custom_minimum_size = Vector2(0, 52)
+layout_mode = 2
+focus_neighbor_top = NodePath("../BtnHowToPlay")
+focus_neighbor_bottom = NodePath("../Btn1P")
+theme_override_font_sizes/font_size = 20
+theme_override_styles/normal = SubResource("StyleBoxFlat_btn_norm")
+theme_override_styles/hover = SubResource("StyleBoxFlat_btn_hover")
+theme_override_styles/focus = SubResource("StyleBoxFlat_btn_hover")
+text = "🚪 Exit Game"
+
+[node name="FooterBanner" type="Label" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.4, 0.45, 0.55, 1)
+theme_override_font_sizes/font_size = 15
+text = "[D-Pad / Stick] Select   [A] Confirm"
+horizontal_alignment = 1
+
+[connection signal="pressed" from="MarginContainer/VBoxContainer/MenuButtons/Btn1P" to="." method="_on_btn_1p_pressed"]
+[connection signal="pressed" from="MarginContainer/VBoxContainer/MenuButtons/Btn2P" to="." method="_on_btn_2p_pressed"]
+[connection signal="pressed" from="MarginContainer/VBoxContainer/MenuButtons/BtnHowToPlay" to="." method="_on_btn_how_to_play_pressed"]
+[connection signal="pressed" from="MarginContainer/VBoxContainer/MenuButtons/BtnQuit" to="." method="_on_btn_quit_pressed"]
